@@ -1,11 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import styled from 'styled-components/native';
+
+const Container = styled.View`
+  flex: 1;
+  background-color: ${({ theme}) => theme.COLORS.GRAY_600};
+  align-items: center;
+  justify-content: center;
+`;
+
+const Title = styled.Text`
+  color: white;
+  font-size: 32px;
+`
+
 
 export default function Groups() {
   return (
-    <View>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar/>
-    </View>
+    <Container>
+      <Title>Groups</Title>
+    </Container>
   );
 }

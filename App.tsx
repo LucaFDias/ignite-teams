@@ -1,9 +1,16 @@
+import { ThemeProvider } from 'styled-components/native';
+import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
+import theme from '@theme/index';
+import React from 'react';
+import { ActivityIndicator } from 'react-native';
 import Groups from './src/screens/Groups';
 
 export default function App() {
+  const [ fontsLoaded ] = useFonts({Roboto_400Regular, Roboto_700Bold});
+
   return (
-    <>
-      <Groups/>
-    </>
+    <ThemeProvider theme={theme}>
+     { fontsLoaded ? <Groups/> : <ActivityIndicator/>}
+    </ThemeProvider>
   );
 }
