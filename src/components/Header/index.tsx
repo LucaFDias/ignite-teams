@@ -32,7 +32,6 @@ type Props = {
 export function Header({ showBackBtn = false}: Props) {
   return (
       <Container>
-
       { 
         showBackBtn &&
           <BackBtn>
