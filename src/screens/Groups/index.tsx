@@ -29,6 +29,7 @@ export default function Groups() {
           <ListEmpty 
           message="Você ainda não possui nenhuma turma cadastrada." />
         )}
+        showsVerticalScrollIndicator={false}
       />
       <Button
           title='Criar novo grupo'
